@@ -14,14 +14,8 @@ li{
     list-style: none;
 }
 
-.appear{
-    opacity: 0;
-
-    will-change: opacity, transform;
-}
-
 body {
-    color: white;
+    color: rgb(255, 255, 255);
     position: relative;
 }
 
@@ -82,7 +76,7 @@ body {
 
 .logo {
     display: flex;
-    width: 7vw;
+    width: 9vw;
     justify-content: left;
     align-items: center;
     margin-left: 3vw;
@@ -103,7 +97,7 @@ body {
     white-space: nowrap;
     transition-delay: 0.1s;
     border-radius: 50px;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     padding-left: 3em;
     padding-right: 3em;
 
@@ -125,6 +119,8 @@ body {
     color: rgb(0, 0, 0);
     border-top: .11em solid #dddddd;
     border-left: .11em solid #dddddd;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
 }
 
 
@@ -243,7 +239,7 @@ p {
     
     background-image: conic-gradient(from var(--angle), transparent 40%, rgb(57, 255, 206));
     z-index: -1;
-    animation: spin 5s linear infinite;
+    animation: spin 8s linear infinite;
 }
 
 .bento-box1::after, .bento-box2::after, .bento-box3::after, .bento-box4::after, .bento-box5::after{
@@ -538,6 +534,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10vh;
     height: 60vh;
     width: 100vw;
@@ -547,8 +544,8 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10vh;
-    height: 100%;
+    gap: 2rem;
+    height: fit-content;
 }
 
 .contact-text{
