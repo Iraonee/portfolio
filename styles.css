@@ -318,7 +318,7 @@ p {
 
 .portfolio-page{
     background: linear-gradient(to top,#003e21d2, rgb(2, 46, 36));
-    height: 210vh;
+    height: 280vh;
     width: 100%;
     gap: 10vh;
     overflow: hidden;
@@ -339,6 +339,8 @@ h3{
 }
 
 .portfolio-poster{
+    display: flex;
+    position: relative;
     height: 80vh;
 }
 
@@ -398,6 +400,8 @@ h3{
 }
 
 .portfolio-logo{
+    position: relative;
+    display: flex;
     height: 30vh;
     width: 90vw;
 }
@@ -451,8 +455,9 @@ h3{
 }
 
 .portfolio-photo{
+    position: relative;
+    display: flex;
     height: 80vh;
-    margin-bottom: 10vh;
 }
 
 .photo-container{
@@ -500,6 +505,62 @@ h3{
 }
 
 .photo{
+    flex: 0 0 5em;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 0 .5em 0 #00000044;
+}
+
+.portfolio-feed{
+    height: 80vh;
+    margin-bottom: 10vh;
+}
+
+.feed-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    width: 90vw;
+    gap: 1vh;
+    padding: 1vw;
+    border-radius: 30px;
+    background-color: rgb(255, 235, 205);
+    box-shadow: 0 0 1em rgb(255, 235, 205);
+}
+
+.feed-container::before{
+    backdrop-filter: blur(1em);
+}
+
+.feed-text{
+    color: #2F2E2A;
+    list-style: none;
+    font-size: 4vw;
+    font-weight: 800;
+}
+
+.feed-scroll{
+    display: flex;
+    height: 80%;
+    border-radius: 15px;
+    overflow-x: auto;
+    user-select: none;
+}
+
+.feed-group{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: scroll-left 15s linear infinite;
+    margin-right: 1em;
+}
+
+.feed{
     flex: 0 0 5em;
     border-radius: 15px;
     height: 100%;
