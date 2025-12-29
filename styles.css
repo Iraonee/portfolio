@@ -318,7 +318,7 @@ p {
 
 .portfolio-page{
     background: linear-gradient(to top,#003e21d2, rgb(2, 46, 36));
-    height: 310vh;
+    height: 320vh;
     width: 100%;
     gap: 15vh;
     overflow: hidden;
@@ -330,12 +330,12 @@ p {
 
 h3{
     display: flex;
-    font-size: 10vw;
+    font-size: 8vw;
     color: beige;
     font-weight: 900;
     letter-spacing: .5vw;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 17vh;
 }
 
 .portfolio-poster{
@@ -412,7 +412,7 @@ h3{
     color: blanchedalmond;
     list-style: none;
     align-self: center;
-    font-size: calc(6vw + 1vh);
+    font-size: calc(5vw + 1vh);
     font-weight: 900;
     margin-right: 3vw;
     margin-bottom: 2vh;
