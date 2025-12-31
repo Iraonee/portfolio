@@ -670,10 +670,10 @@ h3{
     flex-direction: row;
     text-decoration: none;
     background-color: #2F2E2A;
-    padding: 1vw;
+    padding: .5em;
     height: fit-content;
     width: fit-content;
-    border-radius: 20px;;
+    border-radius: 15px;;
     cursor: pointer;
 }
 
@@ -715,5 +715,5 @@ h3{
 }
 
 .icon1 img, .icon2 img, .icon3 img{
-    width: 5vw;
+    width: calc(1em + 3vw);
 }
