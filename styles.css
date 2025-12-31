@@ -72,7 +72,6 @@ body {
         margin-right: 3vw;
 }
 
-
 .logo {
     width: 12vw;
     justify-content: left;
@@ -86,7 +85,7 @@ body {
     list-style: none;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     text-decoration: none;
     opacity: 1;
     color: #ffffff;
@@ -95,8 +94,8 @@ body {
     border-radius: 50px;
     font-size: calc(.8em + .6vw);
     padding-inline: 3vw;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: .8em;
+    padding-bottom: .8em;
 
     background-color: #2f2e2a62;
     backdrop-filter: blur(5px);
@@ -104,6 +103,41 @@ body {
     border-left: 0.11em solid #ffffff;
     box-shadow: .2em .2em .5em 0 #00000044;
     transition: all 0.4s ease-out;
+}
+
+@media (max-width: 900px) {
+    .nav-link {
+        font-size: 16px; 
+        padding-inline: 14px; 
+    }
+    .nav-container{
+        gap: 10px;
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 625px) {
+    .nav-link {
+        font-size: 16px; 
+        padding-inline: 14px; 
+    }
+    .nav-container{
+        gap: 8px;
+        transform: scale(0.7) translateX(21%);
+    }
+}
+
+@media (max-width: 430px) {
+    .nav-link {
+        font-size: 12px; 
+        padding-inline: 10px; 
+    }
+    .nav-container{
+        gap: 10px;
+        transform: scale(0.6) translateX(26%);
+        justify-content: right;
+        margin-right: 1vw;
+    }
 }
 
 .nav-link:hover, .nav-link.nav-link.active-scroll {
@@ -130,13 +164,14 @@ body {
 
 .landing-page-photo {
     display: flex;
+    flex-shrink: 1;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
-    padding: .1%;
-    min-width: 30vh;
-    max-height: 50vh;
-    max-width: 50vh;
+    padding: .5%;
+    width: 1em;
+    min-width: 40vh;
+    max-width: 45vh;
     
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.349);
@@ -163,13 +198,12 @@ p {
     background: linear-gradient(to bottom, #003e21d2, rgb(2, 46, 36));
     position: relative;
     align-content: center;
-    justify-content: flex-start;
-    height: 220vh;
+    justify-items: start;
+    height: fit-content;
     width: 100%;
-    gap: 30vh;
-    padding-bottom: 20vh;
+    gap: clamp(10px, 10vh, 1000px);
+    padding-bottom: 10vh;
     padding-top: 15vh;
-    justify-content: space-between;
     overflow: hidden;
     margin-top: 0;
     border-left: transparent;
@@ -181,12 +215,11 @@ p {
     display: flex;
     flex-direction: column;
     gap: 3vw;
-    height: 80vh;
+    height: fit-content;
     width: 90%;
-    margin-bottom: 8vh;
     margin-left: 5%;
     margin-right: 5%;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .box1{
@@ -196,17 +229,13 @@ p {
     color: beige;
 }
 
-.box12{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .box2{
-    font-size: 2.1vw;
+    font-size: 1.6vw;
     align-self: self-start;
     color: beige;
-    width: 60vw;
+    width: 90vw;
+    white-space: wrap;
+    text-align: justify;
 }
 
 .box3{
@@ -223,18 +252,30 @@ p {
 .bento-aboutme{
     display: grid;
     grid-template-columns: 22% 22% 22% 22%;
-    grid-auto-rows: 50% 30%;
+    grid-auto-rows: 10em 10em;
     position: relative;
-    height: 50vh;
+    height: fit-content;
     gap: 3em;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15vh;
     margin-left: 5%;
     margin-right: 5%;
     grid-template-areas: 
     "box1-bento box2-bento box2-bento box3-bento"
     "box4-bento box4-bento box5-bento box5-bento";
+}
+
+@media (max-width: 600px) {
+  .bento-aboutme {
+    grid-template-columns: repeat(2, 45%);
+    height: auto;
+    grid-auto-rows: 10em 10em 10em 10em;
+    grid-template-areas: 
+    "box2-bento box2-bento"
+    "box1-bento box3-bento"
+    "box4-bento box4-bento"
+    "box5-bento box5-bento";
+  }
 }
 
 .bento-box1, .bento-box2, .bento-box3, .bento-box4, .bento-box5{
@@ -287,38 +328,38 @@ p {
 }
 
 .bento-box1 li{
-    font-size: 2.5vw;
+    font-size: calc(1em + 1vw);
     white-space: nowrap;
     color: beige;
 }
 
 .bento-box2 li{
-    font-size: 2.5vw;
+    font-size: calc(1em + 1vw);
     white-space: nowrap;
     color: beige;
 }
 
 .bento-box3 li{
-    font-size: 2.5vw;
+    font-size: calc(1em + 1vw);
     white-space: nowrap;
     color: beige;
 }
 
 .bento-box4 li{
-    font-size: 2.5vw;
+    font-size: calc(1em + 1vw);
     white-space: nowrap;
     color: beige;
 }
 
 .bento-box5 li{
-    font-size: 2.5vw;
+    font-size: calc(1em + 1vw);
     white-space: nowrap;
     color: beige;
 }
 
 .portfolio-page{
     background: linear-gradient(to top,#003e21d2, rgb(2, 46, 36));
-    height: 320vh;
+    height: fit-content;
     width: 100%;
     gap: 15vh;
     overflow: hidden;
@@ -341,7 +382,7 @@ h3{
 .portfolio-poster{
     display: flex;
     position: relative;
-    height: 80vh;
+    height: fit-content;
 }
 
 .poster-container{
@@ -349,7 +390,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60vh;
+    height: fit-content;
     width: 90vw;
     padding: 1vw;
     border-radius: 30px;
@@ -371,16 +412,17 @@ h3{
 
 .poster-scroll{
     display: flex;
-    height: 45vh;
-    border-radius: 15px;
+    height: fit-content;
+    border-radius: 30px;
     overflow-x: auto;
     user-select: none;
 }
 
 .group{
     display: flex;
+    flex-shrink: 0;
     flex-direction: row;
-    height: 100%;
+    width: fit-content;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -389,9 +431,11 @@ h3{
 }
 
 .poster{
-    flex: 0 0 5em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc(14em + 2vw);
+    min-width: 20vh;
     border-radius: 15px;
-    height: 100%;
     box-shadow: 0 0 .5em 0 #00000044;
 }
 
@@ -460,7 +504,7 @@ h3{
 .portfolio-photo{
     position: relative;
     display: flex;
-    height: 80vh;
+    height: fit-content;
 }
 
 .photo-container{
@@ -468,7 +512,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60vh;
+    height: fit-content;
     width: 90vw;
     gap: 1vh;
     padding: 1vw;
@@ -487,8 +531,8 @@ h3{
 
 .photo-scroll{
     display: flex;
-    height: 80%;
-    border-radius: 15px;
+    height: fit-content;
+    border-radius: 30px;
     overflow-x: auto;
     user-select: none;
 }
@@ -496,7 +540,7 @@ h3{
 .photo-group{
     display: flex;
     flex-direction: row-reverse;
-    height: 100%;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -505,15 +549,18 @@ h3{
 }
 
 .photo{
-    flex: 0 0 5em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc(14em + 2vw);
+    min-width: 20vh;
     border-radius: 15px;
     height: 100%;
     box-shadow: 0 0 .5em 0 #00000044;
 }
 
 .portfolio-feed{
-    height: 80vh;
-    margin-bottom: 10vh;
+    height: fit-content;
+    margin-bottom: 30vh;
 }
 
 .feed-container{
@@ -521,7 +568,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60vh;
+    height: fit-content;
     width: 90vw;
     gap: 1vh;
     padding: 1vw;
@@ -545,7 +592,7 @@ h3{
 .feed-scroll{
     display: flex;
     height: 80%;
-    border-radius: 15px;
+    border-radius: 30px;
     overflow-x: auto;
     user-select: none;
 }
@@ -553,7 +600,7 @@ h3{
 .feed-group{
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -562,7 +609,10 @@ h3{
 }
 
 .feed{
-    flex: 0 0 5em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc(14em + 2vw);
+    min-width: 20vh;
     border-radius: 15px;
     height: 100%;
     box-shadow: 0 0 .5em 0 #00000044;
