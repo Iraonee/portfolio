@@ -230,23 +230,12 @@ p {
 }
 
 .box2{
-    font-size: 1.6vw;
+    font-size: calc(.5em + 1vw);
     align-self: self-start;
     color: beige;
     width: 90vw;
     white-space: wrap;
     text-align: justify;
-}
-
-.box3{
-    position: relative;
-    height: 25vw;
-    border-radius: 50%;
-    align-self: center;
-    justify-self: right;
-    padding: 1%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.453);
-    background-color: beige;
 }
 
 .bento-aboutme{
