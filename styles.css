@@ -400,12 +400,13 @@ h3{
     align-self: center;
 }
 
-.poster-scroll{
+.poster-scroll-1, .poster-scroll-2{
     display: flex;
     height: fit-content;
     border-radius: 30px;
     overflow-x: auto;
     user-select: none;
+    border: #2f2e2a solid .2em;
 }
 
 .group-1, .group-2{
@@ -529,6 +530,7 @@ h3{
     border-radius: 30px;
     overflow-x: auto;
     user-select: none;
+    border: #2f2e2a solid .2em;
 }
 
 .photo-group{
@@ -554,7 +556,6 @@ h3{
 
 .portfolio-feed{
     height: fit-content;
-    margin-bottom: 30vh;
 }
 
 .feed-container{
@@ -589,6 +590,7 @@ h3{
     border-radius: 30px;
     overflow-x: auto;
     user-select: none;
+    border: #2f2e2a solid .2em;
 }
 
 .feed-group{
@@ -612,9 +614,161 @@ h3{
     box-shadow: 0 0 .5em 0 #00000044;
 }
 
+.memorable-moments{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 90vw;
+    gap: 15vh;
+    padding-bottom: 4vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.memorable-moments li{
+    font-size: calc(7vw + 1vh);
+    color: beige;
+    margin: .5em;
+}
+
+.moments-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 90vw;
+    gap: 2vh;
+    padding: 1vw;
+    border-radius: 30px;
+    background-color: rgb(255, 235, 205);
+    box-shadow: 0 0 1em rgb(255, 235, 205);
+}
+
+.moments-container li{
+    font-size: calc(3vh + 3vw);
+    color: #2F2E2A;
+}
+
+.carousel-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+    user-select: none;
+    background-color: #1f7758;
+    border-radius: 25px;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.803) 0 0 0.5em 0;
+}
+
+.carousel-scroll{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: row;
+    height: fit-content;
+    width: calc(20em + 18vw);
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    border-radius: 25px;
+    border: beige solid .2em;
+}
+
+.carousel-group{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: scroll-left 25s linear infinite;
+    margin-right: 1em;
+}
+
+.carousel{
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc(10em + 20vw);
+    border-radius: 15px;
+    box-shadow: 0 0 .5em 0 #00000044;
+}
+
+.carousel-container li{
+    font-size: calc(2vh + 2.5vw);
+    color: beige;
+    text-shadow: #2f2e2a 0em 0.05em 0.3em;
+}
+
+.Documentation-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    flex-wrap: nowrap;
+    width: 100%; 
+    user-select: none;
+    background-color: #1f7758;
+    border-radius: 25px;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.803) 0 0 0.5em 0;
+}
+
+.Documentation-scroll{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    border-radius: 25px;
+    border: beige solid .2em;
+}
+
+.Documentation-group{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: scroll-right 10s linear infinite;
+    margin-right: 1em;
+}
+
+.Documentation{
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc(10em + 20vw);
+    border-radius: 15px;
+    box-shadow: 0 0 .5em 0 #00000044;
+}
+
+.Documentation-container li{
+    font-size: calc(2vh + 2.5vw);
+    color: beige;
+    text-shadow: #2f2e2a 0em 0.05em 0.3em;
+}
+
 @keyframes  scroll-right{
     from{transform: translateX(-100%);}
     to{transform: translateX(0);}
+}
+
+@keyframes  scroll-down{
+    from{transform: translatey(-100%);}
+    to{transform: translatey(10%);}
 }
 
 .contact{
